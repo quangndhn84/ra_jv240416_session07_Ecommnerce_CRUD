@@ -32,10 +32,14 @@
             <td>${catalog.catalogName}</td>
             <td>${catalog.description}</td>
             <td>${catalog.status?"Active":"Inactive"}</td>
-            <td></td>
+            <td>
+                <a href="<%=request.getContextPath()%>/CategoriesController?action=initUpdate&catalogId=${catalog.catalogId}">Update</a>
+                <a href="<%=request.getContextPath()%>/CategoriesController?action=Delete&catalogId=${catalog.catalogId}">Delete</a>
+            </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+<a href="views/newCatalog.jsp">Create new catalog</a>
 </body>
 </html>
